@@ -67,7 +67,7 @@ describe("CalculatorPage", () => {
 
   it("save button is disabled when name is empty", () => {
     render(wrap(<CalculatorPage />));
-    const saveBtn = screen.getByRole("button", { name: /Simpan Resep|Save Recipe/i }) as HTMLButtonElement;
+    const saveBtn = screen.getByRole("button", { name: /Masuk untuk Menyimpan|Login to Save/i }) as HTMLButtonElement;
     expect(saveBtn.disabled).toBe(true);
   });
 
@@ -85,9 +85,8 @@ describe("CalculatorPage", () => {
     expect(screen.getByText(/Tambah Harga Kompetitor|Add Competitor Price/i)).toBeInTheDocument();
   });
 
-  it("renders Save and Reset buttons", () => {
+  it("renders Reset button", () => {
     render(wrap(<CalculatorPage />));
-    expect(screen.getByRole("button", { name: /Simpan Resep|Save Recipe/i })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /Reset/i })).toBeInTheDocument();
   });
 });

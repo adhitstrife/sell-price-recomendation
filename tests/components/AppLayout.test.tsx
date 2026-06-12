@@ -32,9 +32,22 @@ beforeEach(() => {
 });
 
 describe("AppLayout", () => {
-  it("renders app title in header", () => {
+  it("renders ChefCost logo in header", () => {
     render(wrap(<div>content</div>));
-    expect(screen.getByText(/Kalkulator Harga Jual|Sell Price Calculator/i)).toBeInTheDocument();
+    expect(screen.getByText("ChefCost")).toBeInTheDocument();
+  });
+
+  it("renders all 3 nav links", () => {
+    render(wrap(<div>content</div>));
+    expect(screen.getByRole("button", { name: /Beranda|Home/i })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /Kalkulator|Calculator/i })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /Resep Tersimpan|Saved Recipes/i })).toBeInTheDocument();
+  });
+
+  it("renders Login and Get Started buttons", () => {
+    render(wrap(<div>content</div>));
+    expect(screen.getByRole("button", { name: /Masuk|^Login$/i })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /Mulai Sekarang|Get Started/i })).toBeInTheDocument();
   });
 
   it("renders main content area", () => {

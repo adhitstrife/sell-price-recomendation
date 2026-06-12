@@ -188,7 +188,7 @@
     "subtotalIngredients": "Subtotal Bahan",
     "targetFoodCost": "Target Food Cost %",
     "markupMultiplier": "Markup Multiplier",
-    "marketComparison": "Perbandingan Pasar",
+    "marketComparison": "Market Comparison",
     "setTargetFoodCost": "Atur target persentase food cost Anda",
     "setMarkupMultiplier": "Atur multiplier markup untuk harga Anda",
     "addCompetitorPrices": "Tambahkan 2-10 harga kompetitor untuk dibandingkan",
@@ -210,6 +210,13 @@
     "unlockFeaturesDesc": "Simpan resep tanpa batas, lacak tren pasar, dan ekspor laporan.",
     "createAccount": "Buat Akun Gratis",
     "unit": "satuan"
+  },
+  "guest": {
+    "banner": "Anda sedang dalam Mode Tamu. Untuk menyimpan resep dan mengakses data historis, silakan Masuk atau Buat Akun.",
+    "login": "Masuk",
+    "signUp": "Daftar",
+    "loginRequiredTitle": "Login Diperlukan",
+    "loginRequiredMessage": "Silakan masuk untuk menyimpan resep ke akun Anda."
   },
   "msg": {
     "confirmDelete": "Apakah Anda yakin ingin menghapus resep ini?",

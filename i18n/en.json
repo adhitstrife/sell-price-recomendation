@@ -211,6 +211,13 @@
     "createAccount": "Create Free Account",
     "unit": "unit"
   },
+  "guest": {
+    "banner": "You are in Guest Mode. To save your recipe and access historical data, please Log In or Create an Account.",
+    "login": "Log In",
+    "signUp": "Sign Up",
+    "loginRequiredTitle": "Login Required",
+    "loginRequiredMessage": "Please log in to save recipes to your account."
+  },
   "msg": {
     "confirmDelete": "Are you sure you want to delete this recipe?",
     "saveSuccess": "Recipe saved successfully!",

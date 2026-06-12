@@ -44,15 +44,14 @@ const PricingMethodSelector = ({ pricing, onChange }: PricingMethodSelectorProps
     <div className="space-y-5" data-testid="pricing-method-selector">
       <div
         className="flex gap-1 rounded-chef-lg bg-surface-container-low p-1"
-        role="tablist"
+        role="group"
         aria-label={t("calc.sectionPricing", "Pricing Strategy")}
       >
         {METHODS.map((m) => (
           <button
             key={m}
             type="button"
-            role="tab"
-            aria-selected={pricing.method === m}
+            aria-pressed={pricing.method === m}
             onClick={() => setMethod(m)}
             className={`flex-1 rounded-chef px-3 py-2 font-heading text-label-md transition ${
               pricing.method === m
