@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+    color: #191c1e;
+    background-color: #f7f9fb;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), system-ui, sans-serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer components {
+  .card-chef {
+    @apply bg-white rounded-chef border border-surface-container-high shadow-chef p-4 sm:p-5;
+  }
+  .card-chef-lg {
+    @apply bg-white rounded-chef-lg border border-surface-container-high shadow-chef p-5 sm:p-6;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-chef bg-primary px-4 py-2.5 text-sm font-semibold text-white shadow-chef-sm transition hover:bg-[#245d44] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-chef border border-secondary bg-white px-4 py-2.5 text-sm font-semibold text-secondary transition hover:bg-surface-container-low focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-tertiary {
+    @apply inline-flex items-center justify-center gap-2 rounded-chef bg-tertiary px-4 py-2.5 text-sm font-semibold text-white shadow-chef-sm transition hover:bg-[#cf6f1a] focus:outline-none focus:ring-2 focus:ring-tertiary focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 rounded-chef bg-destructive px-4 py-2.5 text-sm font-semibold text-white shadow-chef-sm transition hover:bg-[#dc2626] focus:outline-none focus:ring-2 focus:ring-destructive focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .input-chef {
+    @apply w-full rounded-chef border border-outline-variant bg-white px-3 py-2.5 text-sm text-onSurface placeholder:text-onSurface-variant/60 transition focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30;
+  }
+  .input-mono {
+    @apply w-full rounded-chef border border-outline-variant bg-white px-3 py-2.5 font-body text-sm text-onSurface placeholder:text-onSurface-variant/60 transition focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30;
+    font-variant-numeric: tabular-nums;
+  }
+  .label-chef {
+    @apply block text-sm font-semibold text-secondary;
+  }
+  .section-title {
+    @apply font-heading text-lg font-semibold text-onSurface sm:text-xl;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-outline-variant bg-white px-3 py-1.5 text-xs font-semibold text-secondary transition hover:border-primary hover:text-primary;
+  }
+  .chip-active {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-primary bg-primary px-3 py-1.5 text-xs font-semibold text-white shadow-chef-sm;
+  }
+}
+
+@layer utilities {
+  .text-data-mono {
+    font-family: var(--font-body), monospace;
+    font-variant-numeric: tabular-nums;
+    font-weight: 500;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}

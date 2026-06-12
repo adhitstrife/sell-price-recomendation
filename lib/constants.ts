@@ -1,0 +1,50 @@
+const MAX_INGREDIENTS = 50;
+const MAX_PORTIONS = 9999;
+const MIN_PORTIONS = 1;
+const MIN_FOOD_COST_PERCENT = 10;
+const MAX_FOOD_COST_PERCENT = 60;
+const MIN_MARKUP_MULTIPLIER = 1.5;
+const MAX_MARKUP_MULTIPLIER = 10;
+const MAX_COMPETITOR_PRICES = 10;
+const MIN_COMPETITOR_PRICES = 2;
+const DEFAULT_FOOD_COST_PERCENT = 30;
+const DEFAULT_MARKUP_MULTIPLIER = 3;
+const DEFAULT_LANGUAGE = "id";
+const ROUNDING_BASE = 500;
+const MIN_PRICE = 0;
+const MAX_PRICE = 1_000_000;
+const MIN_INGREDIENT_NAME_LENGTH = 1;
+const MAX_INGREDIENT_NAME_LENGTH = 100;
+
+const UNIT_CONVERSION_MAP: Record<string, Record<string, number>> = {
+  kg: { gram: 1000, kg: 1 },
+  gram: { kg: 0.001, gram: 1 },
+  liter: { ml: 1000, liter: 1 },
+  ml: { liter: 0.001, ml: 1 },
+  pack: { pcs: 1, pack: 1 },
+  pcs: { pack: 1, pcs: 1 },
+  sendok: { gram: 15, sendok: 1 },
+  gelas: { ml: 240, gelas: 1 },
+  sachet: { sachet: 1 },
+};
+
+export {
+  DEFAULT_FOOD_COST_PERCENT,
+  DEFAULT_LANGUAGE,
+  DEFAULT_MARKUP_MULTIPLIER,
+  MAX_COMPETITOR_PRICES,
+  MAX_FOOD_COST_PERCENT,
+  MAX_INGREDIENTS,
+  MAX_INGREDIENT_NAME_LENGTH,
+  MAX_MARKUP_MULTIPLIER,
+  MAX_PORTIONS,
+  MAX_PRICE,
+  MIN_COMPETITOR_PRICES,
+  MIN_FOOD_COST_PERCENT,
+  MIN_INGREDIENT_NAME_LENGTH,
+  MIN_MARKUP_MULTIPLIER,
+  MIN_PORTIONS,
+  MIN_PRICE,
+  ROUNDING_BASE,
+  UNIT_CONVERSION_MAP,
+};
